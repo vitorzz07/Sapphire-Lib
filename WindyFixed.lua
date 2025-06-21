@@ -130,7 +130,7 @@ if not i then local
 k, l=j:find":%d+: "
 
 
-
+warn("[ WindUI: DEBUG Mode ] "..j)
 
 return g.WindUI:Notify{
 Title="DEBUG Mode: Error",
@@ -393,7 +393,7 @@ s.ImageLabel.Image=getcustomasset(t)
 end)
 end)
 if not u then
-.."' doesnt support the URL Images. Error: "..v)
+warn("[ WindUI.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..v)
 
 s:Destroy()
 end
@@ -1999,7 +1999,7 @@ i.Elements[tostring(j)]=d.Parser[k.__type].Save(k)
 end
 end
 
-)
+print(b:JSONEncode(i))
 
 writefile(g.Path,b:JSONEncode(i))
 end
