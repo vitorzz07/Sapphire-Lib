@@ -7567,25 +7567,3 @@ return k
 end
 
 return aa
-
-
--- ImageButton flutuante para abrir/fechar
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-
-local openCloseBtn = Instance.new("ImageButton")
-openCloseBtn.Name = "OpenCloseButton"
-openCloseBtn.Size = UDim2.new(0, 50, 0, 50)
-openCloseBtn.Position = UDim2.new(0, 10, 0.5, -25)
-openCloseBtn.BackgroundTransparency = 1
-openCloseBtn.Image = "rbxassetid://77492891297556"
-openCloseBtn.Parent = playerGui
-
--- Abrir/fechar janela principal
-local uiFrame = playerGui:WaitForChild("WindUI_Main", 5) or playerGui:FindFirstChildOfClass("ScreenGui")
-openCloseBtn.MouseButton1Click:Connect(function()
-    if uiFrame then
-        uiFrame.Enabled = not uiFrame.Enabled
-    end
-end)
