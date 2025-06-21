@@ -15,20 +15,23 @@
 ]]
 
 
-local a a={cache={}, load=function(b)
-    if not b then
-        warn("[ WindUi: DEBUG Mode ] Argument 1 missing or nil in `load`")
-        return nil
+local a = {
+    cache = {},
+    load = function(b)
+        if not b then
+            warn("[ WindUi: DEBUG Mode ] Argument 1 missing or nil in `load`")
+            return nil
+        end
+        if not a[b] or type(a[b]) ~= "function" then
+            warn("[ WindUi: DEBUG Mode ] Invalid module or function for: " .. tostring(b))
+            return nil
+        end
+        if not a.cache[b] then
+            a.cache[b] = { c = a[b]() }
+        end
+        return a.cache[b].c
     end
-    if not a[b] or type(a[b]) ~= "function" then
-        warn("[ WindUi: DEBUG Mode ] Invalid module or function for:", b)
-        return nil
-    end
-    if not a.cache[b] then
-        a.cache[b] = { c = a[b]() }
-    end
-    return a.cache[b].c
-end}do function a.a()
+}do function a.a()
 
 
 
