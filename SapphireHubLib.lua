@@ -415,7 +415,7 @@ Outline="#3b82f6", -- azul
 Text="#ffffff", -- branco
 Placeholder="#fca5a5",
 Background="#7f1d1d", -- fundo vermelho
-Button="#dc2626", -- botão vermelho
+Button="#dc2626", -- botÃ£o vermelho
 Icon="#60a5fa" -- azul claro
 },
 Dark={
@@ -460,15 +460,15 @@ Background="#14532d",
 Button="#22c55e",
 Icon="#86efac",
 },
-Red={
-Name="Red",
-Accent="#ef4444",
-Outline="#fee2e2",
-Text="#ffe4e6",
-Placeholder="#fca5a5",
-Background="#7f1d1d",
-Button="#ef4444",
-Icon="#fecaca",
+Purple={
+Name="Purple",
+Accent="#a855f7",
+Outline="#e9d5ff",
+Text="#f3e8ff",
+Placeholder="#d8b4fe",
+Background="#581c87",
+Button="#9333ea",
+Icon="#c084fc",
 },
 Indigo={
 Name="Indigo",
